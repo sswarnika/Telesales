@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-class CustomersController extends Controller
+
+class PackagesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function cdetail()
+    public function index()
     {
-        return view('cdetail');
+        //
     }
 
     /**
