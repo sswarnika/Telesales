@@ -44,3 +44,8 @@ Route::get('/booking', function(){
 Route::get('/suitableoffers', function(){
 	return view('suitableoffers');
 });
+
+Route::get('/logout', function(){
+   Auth::logout();
+   return Redirect::to('login');
+});
