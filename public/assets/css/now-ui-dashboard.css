@@ -3900,13 +3900,92 @@ Created using IcoMoon - icomoon.io
   text-align: center;
 }
 
-.active-pro a{
-  background-color: #0070C0; 
-  border-radius: 20px;
+.section {
+    width:62.5%;
+    border-top:1px solid #eee;
+    padding:20px 0;
+    margin:auto;
 }
 
-.active-pro p{
-  color: #FFFFFF;
+.pageitem {
+    display:table;
+    width:100%;
+    margin-bottom:15px;
+    padding-top:15px;
+    text-align:center;
+}
+
+.pageitem h1 {
+    font-weight:normal;
+    color:#555;
+    margin:0;
+    text-align:left;
+}
+
+.pageitem h2 {
+    font-size:32px;
+    background-color:inherit;
+    color:#444;
+    margin-top:0;
+}
+
+.pageitem p em {
+    background-color:inherit;
+    color:#444;
+    font-size:40px;
+    font-style:normal;
+    font-weight:100;
+}
+
+.pageitem p {
+    padding:0 75px;
+    margin:0;
+    font-size:18px;
+    line-height:200%;
+ }
+
+.col {
+    display: table-cell;
+}
+
+
+.col ul#sub {
+    float:right; 
+    padding:0;
+    margin:0; 
+}
+
+.col ul#sub li {
+    display:inline;
+    list-style-type: none;
+    text-align:right;
+}
+
+.col ul#sub li a {
+    padding:5px;
+    background-color:inherit;
+    color:#777;
+}
+
+.col ul#sub li a:hover {
+    color:#FC436B;
+}
+
+.col {
+    float:left;
+    margin:auto;
+    width:100%;
+    text-align:center;
+}
+
+.col ul#sub {
+   clear:both;
+   float:none;
+   margin:auto; 
+}
+
+.col ul#sub li {
+    text-align:center;
 }
 
 .active-pro a:hover{

@@ -186,3 +186,9 @@ img { max-width: 100%; }
 
 }
 
+.section {
+    width:62.5%;
+    border-top:1px solid #eee;
+    padding:20px 0;
+    margin:auto;
+}
