@@ -29,4 +29,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/customerdetail', [App\Http\Controllers\CustomersController::class, 'cdetail'])->name('cdetail');
+Route::get('/customerdetails', function(){
+	return view('customerdetails');
+});
+
+Route::get('/feedbacks', function(){
+	return view('feedbacks');
+});
+
+Route::get('/booking', function(){
+	return view('booking');
+});
+
+Route::get('/suitableoffers', function(){
+	return view('suitableoffers');
+});

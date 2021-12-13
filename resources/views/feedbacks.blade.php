@@ -69,7 +69,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand">Home</a>
+            <a class="navbar-brand" href="#pablo">Feedbacks</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -106,10 +106,74 @@
 
       <div class="panel-header panel-header-sm">
       </div>
+      <ul style="margin: 0 auto;">
+      <li style="display: inline-block; vertical-align: top;">
+      <div class="content" style="width: 1000px">
 
-
-
-                </div>
+      <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title"> Feedback History</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Date
+                      </th>
+                      <th>
+                        Category
+                      </th>
+                      <th>
+                        Sub Category
+                      </th>
+                      <th>
+                        Second Sub Category
+                      </th>
+                      <th class="text-right">
+                        Suggested Solutions
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          10/12/2021
+                        </td>
+                        <td>
+                          Outbound Call
+                        </td>
+                        <td>
+                          Seto Company
+                        </td>
+                        <td>
+                          STB Damage
+                        </td>
+                        <td class="text-right">
+                          Technician Booked
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          20/1/2021
+                        </td>
+                        <td>
+                          Outbound Call
+                        </td>
+                        <td>
+                          Seto Company
+                        </td>
+                        <td>
+                          Package Change Request
+                        </td>
+                        <td class="text-right">
+                          Package Changed to Package number 1
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </li>
               </div>
             </div>
           </div>
