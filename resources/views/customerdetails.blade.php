@@ -88,13 +88,13 @@
                     <tbody>
                       <tr>
                         <td>
-                          Dakota Rice
+                          Rohit Dhital
                         </td>
                         <td>
                           9849660291
                         </td>
                         <td>
-                          Oud-Turnhout
+                          Kalimati
                         </td>
                         <td>
                           Package number 1
