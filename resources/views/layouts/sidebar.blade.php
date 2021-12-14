@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <div id = "my-div" style = "display:none;">
 <div class="wrapper ">
     <div class="sidebar" data-color="white">
       <div class="logo">
@@ -38,5 +39,6 @@
       </div>
     </div>
   </div>
+</div>
   </body>
 </html>
