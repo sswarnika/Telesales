@@ -19,6 +19,7 @@ class CreateCustomersTable extends Migration
             $table-> string('contact');
             $table-> string('address');
             $table-> string('package');
+            $table-> boolean('status');
             $table->timestamps();
         });
     }

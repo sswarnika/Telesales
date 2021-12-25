@@ -143,99 +143,99 @@
                       </tr>
                     </tbody>
                   </table>
-              </li>
-</ul>
-                
-          <ul style="margin: 0 auto; width: 1000px; margin-left: -25px">
-            <li style="display: inline-block;">
-          <div class="col-md-12">
-            <div class="card card-plain">
-              <div class="card-header">
-                <h4 class="card-title"> Payment Details</h4>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class=" text-primary">
-                      <th>
-                        Date
-                      </th>
-                      <th>
-                        Package
-                      </th>
-                      <th>
-                        Description
-                      </th>
-                      <th class="text-right">
-                        Amount Due
-                      </th>
-                      <th class="text-right">
-                        Paid
-                      </th>
-                      <th class="text-right">
-                        Method
-                      </th>
-                      <th class="text-right">
-                        Advance
-                      </th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          20/11/2021
-                        </td>
-                        <td>
-                          Package number 1
-                        </td>
-                        <td>
-                          Recharged, no package sent
-                        </td>
-                        <td class="text-right">
-                          RS 0
-                        </td>
-                        <td>
-                          RS 500
-                        </td>
-                        <td>
-                          eSewa
-                        </td>
-                        <td>
-                          RS 0
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          20/1/2020
-                        </td>
-                        <td>
-                          Package number 4
-                        </td>
-                        <td>
-                          Package change requested
-                        </td>
-                        <td class="text-right">
-                          RS 0
-                        </td>
-                        <td>
-                          RS 1000
-                        </td>
-                        <td>
-                          eSewa
-                        </td>
-                        <td>
-                          RS 0
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-       </li>
-   </ul>
-   </div>
+                            </li>
+              </ul>
+                              
+                        <ul style="margin: 0 auto; width: 1000px; margin-left: -25px">
+                          <li style="display: inline-block;">
+                        <div class="col-md-12">
+                          <div class="card card-plain">
+                            <div class="card-header">
+                              <h4 class="card-title"> Payment Details</h4>
+                            </div>
+                            <div class="card-body">
+                              <div class="table-responsive">
+                                <table class="table">
+                                  <thead class=" text-primary">
+                                    <th>
+                                      Date
+                                    </th>
+                                    <th>
+                                      Package
+                                    </th>
+                                    <th>
+                                      Description
+                                    </th>
+                                    <th class="text-right">
+                                      Amount Due
+                                    </th>
+                                    <th class="text-right">
+                                      Paid
+                                    </th>
+                                    <th class="text-right">
+                                      Method
+                                    </th>
+                                    <th class="text-right">
+                                      Advance
+                                    </th>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        20/11/2021
+                                      </td>
+                                      <td>
+                                        Package number 1
+                                      </td>
+                                      <td>
+                                        Recharged, no package sent
+                                      </td>
+                                      <td class="text-right">
+                                        RS 0
+                                      </td>
+                                      <td>
+                                        RS 500
+                                      </td>
+                                      <td>
+                                        eSewa
+                                      </td>
+                                      <td>
+                                        RS 0
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        20/1/2020
+                                      </td>
+                                      <td>
+                                        Package number 4
+                                      </td>
+                                      <td>
+                                        Package change requested
+                                      </td>
+                                      <td class="text-right">
+                                        RS 0
+                                      </td>
+                                      <td>
+                                        RS 1000
+                                      </td>
+                                      <td>
+                                        eSewa
+                                      </td>
+                                      <td>
+                                        RS 0
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     </li>
+                 </ul>
+                 </div>
               </div>
             </div>
           </div>
