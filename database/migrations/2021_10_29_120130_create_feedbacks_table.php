@@ -15,6 +15,11 @@ class CreateFeedbacksTable extends Migration
     {
         Schema::create('feedbacks', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
+            $table->string('category');
+            $table->string('subCategory');
+            $table->string('secondSubVategory');
+            $table->string('suggestedSolutions');
             $table->timestamps();
         });
     }

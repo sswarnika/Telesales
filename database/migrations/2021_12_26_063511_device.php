@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOffersTable extends Migration
+class Device extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateOffersTable extends Migration
      */
     public function up()
     {
-        Schema::create('offers', function (Blueprint $table) {
+       Schema::create('device', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
-            $table->string('offerProvided');
-            $table->timestamps();
+            $table->string('serial number');
+            $table->string('type');
+            $table->string('version');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateOffersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('offers');
+        //
     }
 }

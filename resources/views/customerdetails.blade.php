@@ -107,7 +107,7 @@
                   </table>
               </li>
               <li style="display: inline-block; vertical-align: top;">
-      <div class="content" style="width: 450px;>
+      <div class="content" style="width: 450px;">
 
       <div class="row">
           <div class="col-md-12">
