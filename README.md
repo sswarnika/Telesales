@@ -1,5 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="telesaleslogo.png" width="400"></a></p>
-
+<p align="center"><img src="https://i.ibb.co/phJPDyT/telesaleslogo.png" width="400"></a></p>
 
 ## About Telesales
 
