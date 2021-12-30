@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeedbacksTable extends Migration
+class CreateOffers2Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateFeedbacksTable extends Migration
      */
     public function up()
     {
-        Schema::create('feedbacks', function (Blueprint $table) {
+        Schema::create('offers2', function (Blueprint $table) {
             $table->id();
-            $table->biginteger('cid');
-            $table->date('date');
-            $table->string('category');
-            $table->string('subCategory');
-            $table->string('secondSubVategory');
-            $table->string('suggestedSolutions');
+            $table->string('offerName');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateFeedbacksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feedbacks');
+        Schema::dropIfExists('offers2');
     }
 }
