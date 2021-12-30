@@ -16,6 +16,8 @@ class CreateOffers2Table extends Migration
         Schema::create('offers2', function (Blueprint $table) {
             $table->id();
             $table->string('offerName');
+            $table->unsignedbiginteger('pkgid');
+            $table->foreign('pkgid')->references('id')->on('packages');
             $table->timestamps();
         });
     }
