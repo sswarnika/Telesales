@@ -18,8 +18,8 @@ class CreateCustomersTable extends Migration
             $table-> string('cname');
             $table-> string('contact');
             $table-> string('address');
-            $table-> string('package');
-            $table-> boolean('status');
+            $table-> biginteger('package');
+            $table-> biginteger('status');
             $table->timestamps();
         });
     }

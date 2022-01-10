@@ -86,23 +86,15 @@
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          Rohit Dhital
-                        </td>
-                        <td>
-                          9849660291
-                        </td>
-                        <td>
-                          Kalimati
-                        </td>
-                        <td>
-                          Package number 1
-                        </td>
-                        <td class="text-right">
-                          Recharged
-                        </td>
-                      </tr>
+                    @foreach($cdetail as $key => $data)
+                      <tr>    
+                      <td>{{$data->cname}}</td>
+                      <td>{{$data->contact}}</td>
+                      <td>{{$data->address}}</td>
+                      <td>{{$data->package}}</td>
+                      <td>{{$data->status}}</td>                 
+                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
               </li>

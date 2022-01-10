@@ -29,8 +29,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/customerdetails', function(){
-	return view('customerdetails');
+Route::get('customerdetails', [App\Http\Controllers\CustomersController::class, 'cdetail'])->name('customerdetails');
+
+Route::get('/customerdetails', function () {
+    $cdetail = DB::table('customers')->get();
+
+    return view('customerdetails', ['cdetail' => $cdetail]);
 });
 
 Route::get('/feedbacks', function(){
