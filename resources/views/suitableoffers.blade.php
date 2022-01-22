@@ -73,18 +73,20 @@
                         Date
                       </th>
                       <th>
+                        Customer
+                      </th>
+                      <th>
                         Offer Provided
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          05/12/2021
-                        </td>
-                        <td>
-                          Dashain Offer
-                        </td>
-                      </tr>
+                      @foreach($offers as $key => $data)
+                      <tr>    
+                      <td>{{$data->date}}</td>
+                      <td>{{$data->cname}}</td>
+                      <td>{{$data->offerProvided}}</td>                 
+                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
               </li>

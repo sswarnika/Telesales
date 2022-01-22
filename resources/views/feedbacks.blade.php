@@ -59,7 +59,7 @@
       <li style="display: inline-block; vertical-align: top;">
       <div class="content" style="width: 1000px">
 
-      <div class="row">
+      <div class="row" style="width: 1200px">
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
@@ -69,6 +69,9 @@
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
+                      <th>
+                        Customer
+                      </th>
                       <th>
                         Date
                       </th>
@@ -86,40 +89,16 @@
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          10/12/2021
-                        </td>
-                        <td>
-                          Outbound Call
-                        </td>
-                        <td>
-                          Seto Company
-                        </td>
-                        <td>
-                          STB Damage
-                        </td>
-                        <td class="text-right">
-                          Technician Booked
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          20/1/2021
-                        </td>
-                        <td>
-                          Outbound Call
-                        </td>
-                        <td>
-                          Seto Company
-                        </td>
-                        <td>
-                          Package Change Request
-                        </td>
-                        <td class="text-right">
-                          Package Changed to Package number 1
-                        </td>
-                      </tr>
+                       @foreach($feedbacks as $key => $data)
+                      <tr>    
+                      <td>{{$data->cname}}</td>
+                      <td>{{$data->date}}</td>
+                      <td>{{$data->category}}</td>
+                      <td>{{$data->subCategory}}</td>
+                      <td>{{$data->secondSubCategory}}</td>
+                      <td>{{$data->suggestedSolutions}}</td>                 
+                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
               </li>

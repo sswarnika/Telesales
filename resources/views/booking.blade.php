@@ -70,7 +70,13 @@
                   <table class="table">
                     <thead class=" text-primary">
                       <th>
-                        Date/Time
+                        Customer
+                      </th>
+                      <th>
+                        Date
+                      </th>
+                      <th>
+                        Time
                       </th>
                       <th>
                         Services
@@ -81,28 +87,22 @@
                       <th>
                         Contact
                       </th>
-                      <th class="text-right">
+                      <th>
                         Nearest Landmark
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          11/12/2021
-                        </td>
-                        <td>
-                          STB Repair
-                        </td>
-                        <td>
-                          Oud-Turnhout
-                        </td>
-                        <td>
-                          9849660291
-                        </td>
-                        <td class="text-right">
-                          Hello World School
-                        </td>
-                      </tr>
+                     @foreach($booking as $key => $data)
+                      <tr>    
+                      <td>{{$data->cname}}</td>
+                      <td>{{$data->date}}</td>
+                      <td>{{$data->time}}</td>
+                      <td>{{$data->services}}</td>
+                      <td>{{$data->address}}</td>
+                      <td>{{$data->contact}}</td>
+                      <td>{{$data->nearestlandmark}}</td>                 
+                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
               </li>

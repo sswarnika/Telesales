@@ -32,7 +32,7 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <li>
-                       <i class="now-ui-icons users_single-02" style="margin-top: 15px"></i>
+                       <i class="now-ui-icons users_single-02" style="margin-top: 5.8px"></i>
                 </li>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -55,16 +55,34 @@
 
       <div class="panel-header panel-header-sm">
       </div>
+
       <ul style="margin: 0 auto;">
       <li style="display: inline-block; vertical-align: top;">
       <div class="content" style="width: 700px">
-
       <div class="row">
+        <div class="col-sm-12">
+        </div>
           <div class="col-md-12">
             <div class="card">
+              <table><th>
               <div class="card-header">
                 <h4 class="card-title"> Personal Details</h4>
               </div>
+            </th><th>
+              <div class="search-box" style="margin-left: 150px;">
+                    <form 
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2" style="margin-top:30px;">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" style="margin-top: 30px;">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    </div></th>
               <div class="card-body">
                 <div class="table-responsive">
                   <table class="table">
@@ -86,15 +104,17 @@
                       </th>
                     </thead>
                     <tbody>
+
                     @foreach($cdetail as $key => $data)
                       <tr>    
                       <td>{{$data->cname}}</td>
                       <td>{{$data->contact}}</td>
                       <td>{{$data->address}}</td>
-                      <td>{{$data->package}}</td>
-                      <td>{{$data->status}}</td>                 
+                      <td>{{$data->pkgname}}</td>
+                      <td>{{$data->desp}}</td>                 
                     </tr>
                     @endforeach
+
                     </tbody>
                   </table>
               </li>
@@ -122,17 +142,13 @@
                       </th>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          12345678
-                        </td>
-                        <td>
-                          5G
-                        </td>
-                        <td>
-                          2.0
-                        </td>
-                      </tr>
+                      @foreach($device as $key => $data)
+                      <tr>    
+                      <td>{{$data->serial_number}}</td>
+                      <td>{{$data->type}}</td>
+                      <td>{{$data->version}}</td>              
+                    </tr>
+                    @endforeach
                     </tbody>
                   </table>
                             </li>
@@ -153,13 +169,13 @@
                                       Date
                                     </th>
                                     <th>
-                                      Package
-                                    </th>
-                                    <th>
                                       Description
                                     </th>
                                     <th class="text-right">
-                                      Amount Due
+                                      Amount
+                                    </th>
+                                    <th class="text-right">
+                                      Due
                                     </th>
                                     <th class="text-right">
                                       Paid
@@ -172,52 +188,17 @@
                                     </th>
                                   </thead>
                                   <tbody>
-                                    <tr>
-                                      <td>
-                                        20/11/2021
-                                      </td>
-                                      <td>
-                                        Package number 1
-                                      </td>
-                                      <td>
-                                        Recharged, no package sent
-                                      </td>
-                                      <td class="text-right">
-                                        RS 0
-                                      </td>
-                                      <td>
-                                        RS 500
-                                      </td>
-                                      <td>
-                                        eSewa
-                                      </td>
-                                      <td>
-                                        RS 0
-                                      </td>
+                                    @foreach($payments as $key => $data)
+                                      <tr>    
+                                      <td>{{$data->date}}</td>
+                                      <td>{{$data->description}}</td>
+                                      <td>{{$data->amount}}</td>
+                                      <td>{{$data->due}}</td>
+                                      <td>{{$data->paid}}</td>
+                                      <td>{{$data->method}}</td>
+                                      <td>{{$data->advance}}</td>                 
                                     </tr>
-                                    <tr>
-                                      <td>
-                                        20/1/2020
-                                      </td>
-                                      <td>
-                                        Package number 4
-                                      </td>
-                                      <td>
-                                        Package change requested
-                                      </td>
-                                      <td class="text-right">
-                                        RS 0
-                                      </td>
-                                      <td>
-                                        RS 1000
-                                      </td>
-                                      <td>
-                                        eSewa
-                                      </td>
-                                      <td>
-                                        RS 0
-                                      </td>
-                                    </tr>
+                                    @endforeach
                                   </tbody>
                                 </table>
                               </div>
@@ -236,6 +217,12 @@
   </div>
   <!--   Core JS Files   -->
 
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>

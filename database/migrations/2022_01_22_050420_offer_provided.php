@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Device extends Migration
+class OfferProvided extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class Device extends Migration
      */
     public function up()
     {
-       Schema::create('device', function (Blueprint $table) {
+         Schema::create('offerProvided', function (Blueprint $table) {
             $table->id();
-            $table->string('serial_number');
-            $table->string('type');
-            $table->string('version');
+            $table->date('date');
+            $table->string('offerProvided');
+            $table->unsignedbiginteger('customer');
+            $table->foreign('customer')->references('id')->on('customers');
+            $table->timestamps();
         });
     }
 
@@ -28,6 +30,6 @@ class Device extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('offerProvided');
     }
 }

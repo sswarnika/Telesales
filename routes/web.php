@@ -29,25 +29,14 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('customerdetails', [App\Http\Controllers\CustomersController::class, 'cdetail'])->name('customerdetails');
+Route::get('/customerdetails', [App\Http\Controllers\CustomersController::class, 'cdetail'])->name('customerdetails');
 
-Route::get('/customerdetails', function () {
-    $cdetail = DB::table('customers')->get();
+Route::get('/feedbacks', [App\Http\Controllers\FeedbacksController::class, 'feedbacks'])->name('feedbacks');
 
-    return view('customerdetails', ['cdetail' => $cdetail]);
-});
+Route::get('/booking', [App\Http\Controllers\BookingController::class, 'booking'])->name('booking');
 
-Route::get('/feedbacks', function(){
-	return view('feedbacks');
-});
+Route::get('/suitableoffers', [App\Http\Controllers\OffersController::class, 'offers'])->name('offers');
 
-Route::get('/booking', function(){
-	return view('booking');
-});
-
-Route::get('/suitableoffers', function(){
-	return view('suitableoffers');
-});
 
 Route::get('/logout', function(){
    Auth::logout();

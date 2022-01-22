@@ -19,7 +19,7 @@ class CreateFeedbacksTable extends Migration
             $table->date('date');
             $table->string('category');
             $table->string('subCategory');
-            $table->string('secondSubVategory');
+            $table->string('secondSubCategory');
             $table->string('suggestedSolutions');
             $table->timestamps();
         });
