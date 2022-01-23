@@ -58,7 +58,7 @@
 
       <ul style="margin: 0 auto;">
       <li style="display: inline-block; vertical-align: top;">
-      <div class="content" style="width: 700px">
+      <div class="content" style="width: 800px">
       <div class="row">
         <div class="col-sm-12">
         </div>
@@ -69,7 +69,7 @@
                 <h4 class="card-title"> Personal Details</h4>
               </div>
             </th><th>
-              <div class="search-box" style="margin-left: 150px;">
+              <div class="search-box" style="margin-left: 250px;">
                     <form 
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -85,7 +85,7 @@
                     </div></th>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table id="cdatatable" class="table">
                     <thead class=" text-primary">
                       <th>
                         Name
@@ -99,8 +99,11 @@
                       <th>
                         Package
                       </th>
-                      <th class="text-right">
+                      <th>
                         Status
+                      </th>
+                      <th>
+                        Action
                       </th>
                     </thead>
                     <tbody>
@@ -111,15 +114,64 @@
                       <td>{{$data->contact}}</td>
                       <td>{{$data->address}}</td>
                       <td>{{$data->pkgname}}</td>
-                      <td>{{$data->desp}}</td>                 
-                    </tr>
+                      <td>{{$data->desp}}</td>  
+                      <td>
+                      <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                      </td>             
+                      </tr>
                     @endforeach
-
                     </tbody>
                   </table>
               </li>
-              <li style="display: inline-block; vertical-align: top;">
-      <div class="content" style="width: 450px;">
+
+              <div id="editModal" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <form>
+                      <div class="modal-header">            
+                        <h4 class="modal-title">Edit Customer Detail</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                      </div>
+                      <div class="modal-body">  
+                      <form action="/editcustomerdetails" method="POST" id="editForm">
+                      {{csrf_field()}}
+                      {{method_field('PUT')}}
+                      <div class="mb-3">
+                      <label for="cname" class="form-label">Name</label>
+                      <textarea class="form-control" name="cname" id="cname1" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                      <label for="contact" class="form-label">Contact</label>
+                      <textarea class="form-control" name="contact" id="contact1" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <textarea class="form-control" name="address" id="address1" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                      <label for="package" class="form-label">Package</label>
+                      <textarea class="form-control" name="pkgname" id="package1" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                      <label for="status" class="form-label">Status</label>
+                      <textarea class="form-control" name="desp" id="status1" rows="3"></textarea>
+                      </div>
+                      </form>
+                      </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Update Data</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+      
+
+
+
+      <li style="display: inline-block; vertical-align: top;">
+      <div class="content" style="width: 350px">
 
       <div class="row">
           <div class="col-md-12">
@@ -127,7 +179,7 @@
               <div class="card-header">
                 <h4 class="card-title"> Device Information</h4>
               </div>
-              <div class="card-body">
+              <div class="card-body" style="height: 185px">
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
@@ -236,7 +288,32 @@
   <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
- </div> 
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>"
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var table = $('#cdatatable').DataTable();
+
+        table.on('click',',edit', function(){
+              $tr = $(this).closest('tr'); 
+              if($($tr).hasClass('child')) {
+                $tr = $tr.prev('.parent');
+              }
+        var data = table.row($tr).data();console.log(data);
+
+        $('$cname').val(data[1]);
+        $('$contact').val(data[2]);
+        $('$address').val(data[3]);
+        $('$pkgname').val(data[4]);
+        $('$desp').val(data[5]);
+        
+        $('#editForm').attr('action','customerdetails/'+data[0]);
+        $('editModal').modal('show');
+    });
+</script>
+
+</div> 
 </body>
 
 </html>
